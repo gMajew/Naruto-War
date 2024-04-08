@@ -19,4 +19,11 @@ con.connect(function (err) {
     if (err) throw err;
     console.log("Database successfully created");
   });
+  const mobSql =
+    "CREATE TABLE IF NOT EXISTS mobs (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), hp INT, imageLink VARCHAR(255), damage INT, speed INT, canShoot BOOLEAN)";
+
+  con.query(mobSql, function (err, result) {
+    if (err) throw err;
+    console.log("mobs table successfully created");
+  });
 });
