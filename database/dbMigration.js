@@ -11,8 +11,10 @@ let con = mysql.createConnection({
 con.connect(function (err) {
   if (err) throw err;
   console.log("Connected!");
+
   const sql =
-    "INSERT INTO personage ( name, hp, imageLink, damage,  speed,  spell1,  spell2,  spell3) VALUES ?";
+    "INSERT INTO personage (name, hp, imageLink, damage, speed, spell1, spell2, spell3) VALUES ?";
+
   const values = [
     [
       "Naruto",
@@ -35,8 +37,22 @@ con.connect(function (err) {
       "SasukeSpell3",
     ],
   ];
+
   con.query(sql, [values], function (err, result) {
     if (err) throw err;
-    console.log("Successfuly inserted : " + result.affectedRows);
+    console.log("Successfully inserted : " + result.affectedRows);
+  });
+
+  const mobSql =
+    "INSERT INTO mobs (name, hp, imageLink, damage, speed, canShoot) VALUES ?";
+
+  const mobValues = [
+    ["Mob1", 30, "mob1.png", 10, 5, true],
+    ["Mob2", 45, "mob2.png", 5, 7, false],
+  ];
+
+  con.query(mobSql, [mobValues], function (err, result) {
+    if (err) throw err;
+    console.log("Successfully inserted : " + result.affectedRows);
   });
 });
