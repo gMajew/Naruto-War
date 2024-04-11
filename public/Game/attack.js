@@ -17,7 +17,7 @@ function update() {
       mobSql.y
     );
     if (distance < mobSql.canshoot) {
-      console.log(`Le mob ${mob.name} attaque le joueur !`);
+      sql.hp -= mobSql.damage;
     }
   });
 }
