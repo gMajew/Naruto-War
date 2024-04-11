@@ -55,4 +55,16 @@ con.connect(function (err) {
     if (err) throw err;
     console.log("Successfully inserted : " + result.affectedRows);
   });
+  const SpellSql =
+    "INSERT INTO spell (name, imageLink, damage, couldown, canShoot) VALUES ?";
+
+  const SpellValues = [
+    ["Spell1", "spell1.png", 10, 5, true],
+    ["Spell2", "spell2.png", 5, 7, false],
+  ];
+
+  con.query(SpellSql, [SpellValues], function (err, result) {
+    if (err) throw err;
+    console.log("spell table successfully created");
+  });
 });
