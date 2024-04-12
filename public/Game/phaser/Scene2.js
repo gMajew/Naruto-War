@@ -1,3 +1,18 @@
+import { Character, Spell, NarutoSpell1 } from "../personage.js";
+const pute = new Character(
+  "Orochimaron",
+  10,
+  "Niquye",
+  10,
+  10,
+  true,
+  true,
+  false
+);
+
+console.log(pute);
+console.log(NarutoSpell1);
+
 class Scene2 extends Phaser.Scene {
   constructor() {
     super("playGame");

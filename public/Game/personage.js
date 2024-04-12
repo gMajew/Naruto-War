@@ -91,3 +91,5 @@ const Sasuke = new Character(
 
 console.log(Naruto);
 console.log(Sasuke);
+
+export { Character, Spell, NarutoSpell1 };
