@@ -20,7 +20,7 @@ con.connect(function (err) {
     console.log("Database successfully created");
   });
   const mobSql =
-    "CREATE TABLE IF NOT EXISTS mobs (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), hp INT, imageLink VARCHAR(255), damage INT, speed INT, canShoot BOOLEAN)";
+    "CREATE TABLE IF NOT EXISTS mobs (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), hp INT, imageLink VARCHAR(255), damage INT, speed INT, canshoot INT)";
 
   con.query(mobSql, function (err, result) {
     if (err) throw err;
