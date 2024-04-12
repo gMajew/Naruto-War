@@ -44,11 +44,11 @@ con.connect(function (err) {
   });
 
   const mobSql =
-    "INSERT INTO mobs (name, hp, imageLink, damage, speed, canShoot) VALUES ?";
+    "INSERT INTO mobs (name, hp, imageLink, damage, speed, canshoot) VALUES ?";
 
   const mobValues = [
-    ["Mob1", 30, "mob1.png", 10, 5, true],
-    ["Mob2", 45, "mob2.png", 5, 7, false],
+    ["Mob1", 30, "mob1.png", 10, 5, 10],
+    ["Mob2", 45, "mob2.png", 5, 7, 20],
   ];
 
   con.query(mobSql, [mobValues], function (err, result) {
