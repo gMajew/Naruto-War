@@ -4,7 +4,7 @@ class Scene1 extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image("background", "./img/Background_naruto.png");
+    this.load.image("background", "./phaser/img/b.png");
     this.load.spritesheet("naruto", "./img/narutess.png", {
       frameWidth: 60,
       frameHeight: 60,

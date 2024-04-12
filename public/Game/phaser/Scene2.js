@@ -111,7 +111,7 @@ class Scene2 extends Phaser.Scene {
         const dy = this.enn.y - this.spell.y;
         const angle = Math.atan2(dy, dx);
         this.spell.setVelocityX(160 * Math.cos(angle));
-        this.spell.setVelocityY(160 * Math);
+        this.spell.setVelocityY(160 * Math.sin(angle));
       },
       loop: true,
     });
@@ -121,8 +121,8 @@ class Scene2 extends Phaser.Scene {
     const dx = this.player.x - this.enn.x;
     const dy = this.player.y - this.enn.y;
     const angle = Math.atan2(dy, dx);
-    this.enn.setVelocityX(160 * Math.cos(angle));
-    this.enn.setVelocityY(160 * Math.sin(angle));
+    this.enn.setVelocityX(50 * Math.cos(angle));
+    this.enn.setVelocityY(50 * Math.sin(angle));
     this.enn.setScale(-1, 1);
     this.enn.anims.play("mob-walk", true);
 
